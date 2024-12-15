@@ -1,60 +1,112 @@
-# Netflix GPT - AI Movie Recommendation Platform
+# Netflix GPT
 
-An OTT platform inspired by Netflix that fetches movie data, provides AI-driven recommendations, and enhances user experience with advanced features.
-
----
-
-## **Features**
-
-### **Public Access**
-- **SignIn/SignUp Page**
-   - User authentication for secure access.
-   - Validations handled efficiently with **Formik** and React's `useRef` hook.
-- **Search Bar**
-   - Multilingual search functionality using **TMDB API**.
-   - Implemented memoization to minimize unnecessary server calls and improve performance.
-
-### **Authenticated Access**
-- **Home Page**
-   - Browse the latest movies and trending shows.
-   - Responsive UI designed with **Tailwind CSS**.
-- **Browse Page**
-   - **Navbar**: Easy navigation across sections.
-   - **Showcase Section**: Highlights popular titles.
-   - **Trending Movies**: AI-powered suggestions.
-   - **Movie Lists**: Multiple categorized movie sections.
-- **AI-Powered NetflixGPT**
-   - Smart movie recommendations based on user inputs and preferences.
+An AI-powered OTT platform that recommends movies based on user preferences and browsing history. Built with React, Redux, Tailwind CSS, and TMDB API to provide a seamless user experience with multilingual support and advanced search capabilities.
 
 ---
 
-## **Tech Stack**
+## Features
 
-| **Tech**                | **Purpose**                               |
-|-------------------------|-------------------------------------------|
-| **React.js**            | Component-based frontend development.    |
-| **Redux**               | State management for fetched movie data. |
-| **Formik**              | Input validation and error handling.     |
-| **Tailwind CSS**        | Fast and modern responsive UI styling.   |
-| **TMDB API**            | Movie data fetching and integration.     |
-| **React Hooks**         | Navigation (`useNavigate`), references, and performance optimization. |
+### Home Page (Unauthenticated Users)
+- Interactive homepage for users who are not signed in.
+- Includes features like trending movies, showcases, and suggestions.
+
+### Sign In / Sign Up Page
+- **Sign In Form**: Allows existing users to authenticate themselves.
+- **Sign Up Form**: Enables new users to create an account.
+
+### Browse Page (Authenticated Users)
+- Dynamic **Navbar** for navigation.
+- **Showcase** section displaying featured content.
+- **Trending** movies list.
+- **Movies Suggestions** powered by Netflix GPT AI.
+- **Movies List**: Multiple categorized lists of movies fetched from the TMDB API.
+- **Search** functionality for browsing movies.
+
+### Netflix GPT AI
+- Provides personalized movie recommendations using AI.
+- Seamlessly integrates suggestions based on search and user preferences.
 
 ---
 
-## **Working of the Project**
+## Technologies Used
 
-1. **User Authentication**  
-   - Users must sign up/sign in to access the browsing and recommendation features.  
+### Frontend
+- **React.js**: Component-based UI library for building the application.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
 
-2. **Movie Search**  
-   - Search for movies or shows using the **TMDB API**.  
-   - Multilingual support and memoized requests for better performance.
+### State Management
+- **Redux**: Efficient state management for handling data across the app.
 
-3. **AI Recommendations**  
-   - NetflixGPT offers personalized suggestions using AI.
+### Backend Integration
+- **TMDB API**: Fetches movie data dynamically for listings and suggestions.
 
-4. **Movie Listings**  
-   - Browse categorized movies: Trending, Recommendations, and Custom Lists.  
+### Other Libraries
+- **Formik**: Form validation and error handling.
+- **useRef & useNavigate Hooks**: Enhanced navigation and input handling.
 
-5. **Error Handling**  
-   - Input forms are validated with Formik, ensuring smooth user experience.  
+---
+
+## Key Functionalities
+
+- **Multilingual Search Bar**: 
+  - Built with memoization to reduce unnecessary server calls and improve performance.
+  - Supports searching for movies in multiple languages.
+
+- **Form Validations**:
+  - Validates input fields using **Formik**.
+  - Error handling is efficiently managed with the **useRef** hook.
+
+- **Page Navigation**:
+  - Implemented using the **useNavigate** hook for seamless transitions between pages.
+
+- **Movie Fetching**:
+  - Integrated the **TMDB API** to fetch and display movie data.
+  - Managed state efficiently with the **Redux Store**.
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+Make sure you have the following installed on your system:
+- Node.js
+- npm or yarn
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/netflix-gpt.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd netflix-gpt
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
+
+4. Create a `.env` file in the root directory and add your TMDB API key:
+   ```env
+   REACT_APP_TMDB_API_KEY=your_api_key_here
+   ```
+
+5. Start the development server:
+   ```bash
+   npm start
+   ```
+   or
+   ```bash
+   yarn start
+   ```
+
+6. Open your browser and visit:
+   ```
+   http://localhost:3000
+   ```
