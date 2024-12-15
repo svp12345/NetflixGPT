@@ -1,65 +1,60 @@
-# Netflix GPT
+# Netflix GPT - AI Movie Recommendation Platform
 
-OTT Platform with Movies recommendation using AI
+An OTT platform inspired by Netflix that fetches movie data, provides AI-driven recommendations, and enhances user experience with advanced features.
 
+---
 
-## Features
+## **Features**
 
-- Home Page (is user !authorised)
+### **Public Access**
+- **SignIn/SignUp Page**
+   - User authentication for secure access.
+   - Validations handled efficiently with **Formik** and React's `useRef` hook.
+- **Search Bar**
+   - Multilingual search functionality using **TMDB API**.
+   - Implemented memoization to minimize unnecessary server calls and improve performance.
 
-  - Signin/Signup Page
-    - SignInForm / SignUpForm
+### **Authenticated Access**
+- **Home Page**
+   - Browse the latest movies and trending shows.
+   - Responsive UI designed with **Tailwind CSS**.
+- **Browse Page**
+   - **Navbar**: Easy navigation across sections.
+   - **Showcase Section**: Highlights popular titles.
+   - **Trending Movies**: AI-powered suggestions.
+   - **Movie Lists**: Multiple categorized movie sections.
+- **AI-Powered NetflixGPT**
+   - Smart movie recommendations based on user inputs and preferences.
 
-- Browse Page
+---
 
-  - Navbar
-  - Showcase
-  - Trendings
-  - MoviesSuggestion
-    - MoviesList \* N
+## **Tech Stack**
 
-- NetflixGPT
-  - Search
-  - MoviesSuggestion
+| **Tech**                | **Purpose**                               |
+|-------------------------|-------------------------------------------|
+| **React.js**            | Component-based frontend development.    |
+| **Redux**               | State management for fetched movie data. |
+| **Formik**              | Input validation and error handling.     |
+| **Tailwind CSS**        | Fast and modern responsive UI styling.   |
+| **TMDB API**            | Movie data fetching and integration.     |
+| **React Hooks**         | Navigation (`useNavigate`), references, and performance optimization. |
 
+---
 
-## Screen Shot
+## **Working of the Project**
 
-- Landing Page
+1. **User Authentication**  
+   - Users must sign up/sign in to access the browsing and recommendation features.  
 
-  ![Screenshot (300)](https://github.com/user-attachments/assets/f1437e89-5235-4a74-a59b-74af16d8efdf)
+2. **Movie Search**  
+   - Search for movies or shows using the **TMDB API**.  
+   - Multilingual support and memoized requests for better performance.
 
-- Signin Page
+3. **AI Recommendations**  
+   - NetflixGPT offers personalized suggestions using AI.
 
-  ![Screenshot (301)](https://github.com/user-attachments/assets/d4b72956-3414-40d5-acab-cf913011653c)
+4. **Movie Listings**  
+   - Browse categorized movies: Trending, Recommendations, and Custom Lists.  
 
-
-- Signup Page
-
-  ![Screenshot (302)](https://github.com/user-attachments/assets/0eb1ac23-130b-4962-8fa6-6e03a160b40d)
-
-
-- Browse Page
-
-  ![Screenshot (303)](https://github.com/user-attachments/assets/1655dfd6-31ee-49fc-8bfe-5f196930c69d)
-
-
-- Movie List
-
-  ![Screenshot (304)](https://github.com/user-attachments/assets/c18cdb56-00dc-480d-a03e-db0c529af5f0)
-
-
-- Shimmer Loading
-
-  ![Screenshot (305)](https://github.com/user-attachments/assets/fbaae4f8-9ffe-4e76-b2c5-7e028f7897cb)
-
-
-- Search Page
-  
-  ![Screenshot (306)](https://github.com/user-attachments/assets/fe7cc36e-6924-4ae4-8485-4081bad16d46)
-
-  
-
-- Watch Now Page
-
-![Screenshot (307)](https://github.com/user-attachments/assets/f53f61c4-cc56-47a5-84c6-c93e8f18c815)
+5. **Error Handling**  
+   - Input forms are validated with Formik, ensuring smooth user experience.  
